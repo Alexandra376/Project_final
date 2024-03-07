@@ -17,3 +17,41 @@
     width: 300px;
     border-radius: 5px;
 }
+
+@media (max-width: 1468px) {
+    .main {
+        grid-template-columns: 1fr 1fr;
+        align-self: center;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 1027px) {
+    .main {
+        grid-template-columns: 1fr;
+        align-self: center;
+    }
+}
+
+@media (max-width: 551px) {
+    .main {
+        grid-template-columns: 1fr;
+        align-self: center;
+    }
+    .card {
+        width: 300px;
+    }
+}
+
+@media (max-width: 450px) {
+    .main {
+        grid-template-columns: 1fr;
+        align-self: center;
+    }
+    .card {
+        width: 250px;
+    }
+    .card img {
+        width: 250px;
+    }
+}

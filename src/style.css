@@ -61,6 +61,11 @@ li.active {
     border-radius: 10px;
 }
 
+.footer-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
 .footer-wrapper img {
     width: 40px;
 }
@@ -69,4 +74,30 @@ li.active {
     justify-content: center;
     display: flex;
     padding: 5px 0;
+    width: 49px;
+    height: 40px;
+}
+
+@media (max-width: 1027px) {
+    .footer {
+        width: 92%;
+    }
+}
+
+@media (max-width: 840px) {
+    .footer {
+        width: 90%;
+    }
+}
+
+@media (max-width: 551px) {
+    .footer {
+        width: 87%;
+    }
+}
+
+@media (max-width: 450px) {
+    .footer {
+        width: 84%;
+    }
 }
