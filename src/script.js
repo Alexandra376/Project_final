@@ -20,7 +20,7 @@ const getWeather = async () => {
     const { windspeed, winddirection, weathercode, temperature } = current_weather;
 
 
-    title.textContent = city;
+    title.textContent = `${city}, Russia`;
     weatherTemperature.textContent = `Temperature: ${temperature} °C`;
     info.textContent = getWeatherDesc(weathercode);
     weatherWindspeed.textContent = `Windspeed: ${windspeed} km/h`;
