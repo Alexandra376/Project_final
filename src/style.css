@@ -20,11 +20,12 @@ body {
     width: 250px;
     border-radius: 10px;
     color: white;
-    padding: 0 0 10px 20px;
+    padding: 0 0 10px 25px;
 }
 
-.card h1 {
+.card h2 {
     color: rgb(140 131 2 / 78%);
+    padding-top: 10px;
 }
 
 .bold {
@@ -46,4 +47,20 @@ li a{
 li.active {
     background-color: #fff6f433;
     box-shadow: #dbd8d8;
+}
+
+.footer-wrapper {
+    background-color: rgb(252 186 88 / 61%);
+    margin-top: 300px;
+    border-radius: 10px;
+}
+
+.footer-wrapper img {
+    width: 40px;
+}
+
+.footer-wrapper a {
+    justify-content: center;
+    display: flex;
+    padding: 5px 0;
 }

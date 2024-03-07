@@ -1,10 +1,11 @@
 const title = document.getElementById("city");
-const weatherLatitude = document.getElementById("latitude");
-const weatherLongitude = document.getElementById("longitude");
 const weatherWindspeed = document.getElementById("windspeed");
-const weatherwWinddirection = document.getElementById("winddirection");
-const newWeathercode = document.getElementById("weathercode");
 const weatherTemperature = document.getElementById("temperature");
+const info = document.getElementById("info");
+// const weatherLatitude = document.getElementById("latitude");
+// const weatherLongitude = document.getElementById("longitude");
+// const weatherwWinddirection = document.getElementById("winddirection");
+// const newWeathercode = document.getElementById("weathercode");
 const getWeather = async () => {
     const response = await fetch('https://get.geojs.io/v1/ip/geo.json');
     const data = await response.json();
@@ -20,12 +21,13 @@ const getWeather = async () => {
 
 
     title.textContent = city;
-    weatherLatitude.textContent = `Latitude: ${latitude}`;
-    weatherLongitude.textContent = `Longitude: ${longitude}`;
-    weatherWindspeed.textContent = `Windspeed: ${windspeed} km/h`;
-    weatherwWinddirection.textContent = `Winddirection: ${winddirection}`;
-    newWeathercode.textContent = `Weathercode: ${weathercode}`;
     weatherTemperature.textContent = `Temperature: ${temperature} °C`;
+    info.textContent = getWeatherDesc(weathercode);
+    weatherWindspeed.textContent = `Windspeed: ${windspeed} km/h`;
+    // weatherLatitude.textContent = `Latitude: ${latitude}`;
+    // weatherLongitude.textContent = `Longitude: ${longitude}`;
+    // weatherwWinddirection.textContent = `Winddirection: ${winddirection}`;
+    // newWeathercode.textContent = `Weathercode: ${weathercode}`;
 }
 
 function getWeatherDesc(code) {
@@ -88,8 +90,4 @@ function getWeatherDesc(code) {
             return "Thunderstorm slight"
     }
 }
-getWeatherDesc();
-
-
-
 getWeather();
